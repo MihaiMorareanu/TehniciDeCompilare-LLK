@@ -5,12 +5,12 @@ public class NonTerminal extends ProductionElement {
     Production production;
 
     public NonTerminal(char tag) {
-        super.tag = tag;
+        super.setTag(tag);
         this.production = null;
     }
 
     public NonTerminal(Production production, char tag) {
-        super.tag = tag;
+        super.setTag(tag);
         this.production = production;
     }
 

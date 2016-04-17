@@ -1,8 +1,9 @@
 package LL_pack;
 
 public abstract class ProductionElement {
-    char tag;
-    boolean isTerminal = false;
+    private char tag;
+    private boolean isTerminal = false;
+    private boolean isLambda = false;
 
     public char getTag() {
         return tag;
@@ -18,6 +19,14 @@ public abstract class ProductionElement {
 
     public void setTerminal(boolean terminal) {
         isTerminal = terminal;
+    }
+
+    public boolean isLambda() {
+        return isLambda;
+    }
+
+    public void setLambda(boolean lambda) {
+        isLambda = lambda;
     }
 
     public String toString() {

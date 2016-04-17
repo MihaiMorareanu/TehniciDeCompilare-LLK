@@ -54,8 +54,10 @@ public class Production {
                     tempList.add(new NonTerminal(currChar));
                 else if(currChar >= 'a' && currChar <='z' )
                     tempList.add(new Terminal(currChar));
+                else if(currChar == '~')
+                    tempList.add(new Terminal(currChar, true));
                 else
-                    throw new InvalidParameterException("Only letters from a - z and A - Z. You entered: " + currChar);
+                    throw new InvalidParameterException("Only letters from a - z and A - Z and ~ for lambda. You entered: " + currChar);
             }
             toSet.add(tempList);
         }
