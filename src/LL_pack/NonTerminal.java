@@ -21,4 +21,8 @@ public class NonTerminal extends ProductionElement {
     public void setProduction(Production production) {
         this.production = production;
     }
+
+    public String toString() {
+        return ""+super.getTag();
+    }
 }
